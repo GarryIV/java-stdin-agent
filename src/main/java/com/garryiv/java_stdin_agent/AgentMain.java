@@ -5,12 +5,7 @@ import java.io.FileNotFoundException;
 import java.lang.instrument.Instrumentation;
 
 public class AgentMain {
-    public static void premain(String args, Instrumentation inst) {
-        System.out.println("AgentMain: " + args);
-        try {
-            System.setIn(new FileInputStream(args));
-        } catch (FileNotFoundException e) {
-            System.out.println("AgentMain: " + e.getMessage());
-        }
+    public static void premain(String args, Instrumentation inst) throws FileNotFoundException {
+        System.setIn(new FileInputStream(args));
     }
 }
