@@ -3,5 +3,6 @@ I found no way to sent file to System.in to run solution.
 
 Please let me know if there's more convinient way to do it :)
 
-Usage
+Usage:
+
 java -java-stdin-agent.jar=sample.txt ... 
